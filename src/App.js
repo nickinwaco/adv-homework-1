@@ -22,6 +22,8 @@ import ProductDetail from "./Components/ProductDetail";
 
 
 
+
+
 function App(props) {
 
     return (
@@ -69,25 +71,23 @@ function App(props) {
                         </div>
                     </div>
 
-                </div> 
-                
+                </div>
+
                 {/* Begin of products */}
 
-                <div className="row">
-                  {/* First Product */}
+              <div className="row">
+                {/* First Product */}
 
-                       {/*  <ProductDetail  /> */}
+                {/*  <ProductDetail  /> */}
 
-                 {props.productList.products.map( (blah) => { 
-                        return <ProductDetail item={blah}  />
-                    } // end of return
-                    ) //end of map
+                {props.state.products.map( (blah) => {
+                  return <ProductDetail inCrease1={props.inCrease} item={blah}  />
+                } // end of return
+                    ) // end of map
                  }
 
 
                   {/* First Proudct */}
-
-               
 
 
                 </div>  {/* end of Row - Product Detail */}
